@@ -23,3 +23,4 @@ Assignment
     Optional: add a ‘loading’ component that displays from the time the form is submitted until the information comes back from the API.
     Push that baby to github and share your solution below!
 
+https://www.theodinproject.com/lessons/node-path-javascript-weather-app
