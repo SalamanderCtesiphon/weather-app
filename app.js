@@ -45,6 +45,8 @@ function displayIcon(weatherObj) {
 
 function clearPage() {
   const pageView = document.querySelector('.pageView');
+  const searchItem = document.getElementById('search');
+  searchItem.value = "";
   pageView.innerHTML = '';
 }
 
