@@ -24,8 +24,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 72vh;
-  margin-top: 10vh;
+  justify-content: center;
+  height: 82vh;
 }
 
 .footer {
