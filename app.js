@@ -24,9 +24,12 @@ async function getWeather() {
 function displayIcon(weatherObj) {
   const pageView = document.querySelector('.pageView');
   const weatherIcon = document.createElement('img');
+  const temperature = document.createElement('p');
+  temperature.innerHTML = `Temperature: ${weatherObj.current.temp_f}&deg;F`;
   weatherIcon.innerHTML = '';
   weatherIcon.src = weatherObj.current.condition.icon;
   pageView.appendChild(weatherIcon);
+  pageView.appendChild(temperature);
 }
 
 function clearPage() {
