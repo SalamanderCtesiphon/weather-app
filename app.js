@@ -36,3 +36,5 @@ function clearPage() {
   const pageView = document.querySelector('.pageView');
   pageView.innerHTML = '';
 }
+
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();

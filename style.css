@@ -5,3 +5,44 @@
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 7vh;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.pageView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 72vh;
+  margin-top: 10vh;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 4.3vh;
+}
+
+.footer-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  
+}
