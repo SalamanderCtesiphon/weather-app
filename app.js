@@ -16,6 +16,13 @@ async function getWeather() {
   const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=b37330c70fce4bd19ce153856232703&q=${userLocation}&aqi=no`, {mode: 'cors'});
   const weatherData = await response.text(); 
   const weatherObj = JSON.parse(weatherData);
-  console.log(weatherObj.current.temp_f);  
+  console.log(weatherObj.current.condition.icon); 
+  displayIcon(weatherObj); 
 } 
 
+function displayIcon(weatherObj) {
+  const pageView = document.querySelector('.pageView');
+  const weatherIcon = document.createElement('img');
+  weatherIcon.src = weatherObj.current.condition.icon;
+  pageView.appendChild(weatherIcon);
+}
