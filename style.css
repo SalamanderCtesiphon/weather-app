@@ -28,6 +28,12 @@
   height: 52vh;
 }
 
+img {
+  height: 20vh;
+  width: auto;
+  margin: 4vh;
+}
+
 .emptyDiv {
   height: 30vh;
 }
