@@ -24,12 +24,23 @@ async function getWeather() {
 function displayIcon(weatherObj) {
   const pageView = document.querySelector('.pageView');
   const weatherIcon = document.createElement('img');
+  const selectedCity = document.createElement('p');
   const temperature = document.createElement('p');
-  temperature.innerHTML = `Temperature: ${weatherObj.current.temp_f}&deg;F`;
-  weatherIcon.innerHTML = '';
+  const feelsLike = document.createElement('p');
+  const wind = document.createElement('p');
+  const windDirection = document.createElement('p');
   weatherIcon.src = weatherObj.current.condition.icon;
+  selectedCity.innerHTML = `${weatherObj.location.name}, ${weatherObj.location.region}`
+  temperature.innerHTML = `Current Temperature: ${weatherObj.current.temp_f}&deg;F`;
+  feelsLike.innerHTML = `Feels Like: ${weatherObj.current.feelslike_f}&deg;F`;
+  wind.innerHTML = `Wind Speed: ${weatherObj.current.wind_mph} mph`
+  windDirection.innerHTML = `Wind Direction: ${weatherObj.current.wind_dir}`
   pageView.appendChild(weatherIcon);
+  pageView.appendChild(selectedCity);
   pageView.appendChild(temperature);
+  pageView.appendChild(feelsLike);
+  pageView.appendChild(wind);
+  pageView.appendChild(windDirection);
 }
 
 function clearPage() {
